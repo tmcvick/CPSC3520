@@ -1,0 +1,25 @@
+%{
+#include <stdio.h>
+#include "prolog1.tab.h"
+%}
+%option nounput
+%option noinput
+%option noyywrap
+
+NUM [0-9]
+UPPERCASE [A-Z]
+LOWERCASE [a-z]
+%%
+[.] {return DOT;}
+{NUM} {return DIGIT;}
+"(" {return LPARENS;}
+")" {return RPARENS;}
+":" {return COLON;}
+"," {return COMMA;}
+"-" {return DASH;}
+"'" {return QUOTE;}
+{UPPERCASE} {return UPPERCASE;}
+{LOWERCASE} {return LOWERCASE;}
+[ \r\t\n]+ /* whitespace */
+. {return(-1);}
+%%

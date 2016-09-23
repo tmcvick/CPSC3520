@@ -1,0 +1,76 @@
+File-name: bobby
+File-contents:
+	
+	bobby.
+Prolog parser result:
+
+The input string is a SYNTACTICALLY CORRECT Prolog set of clauses.
+File-name: bobby_bad
+File-contents:
+bobby('727).
+Prolog parser result:
+syntax error
+
+Syntactically incorrect (INVALID) string
+
+File-name: whatis
+File-contents:
+whatis('this', "h", e, l, l, o, w, o, r, l, d).
+Prolog parser result:
+syntax error
+
+Syntactically incorrect (INVALID) string
+
+File-name: whatis1
+File-contents:
+whatmaybe('this',     is,	a,      button).
+Prolog parser result:
+
+The input string is a SYNTACTICALLY CORRECT Prolog set of clauses.
+File-name: whatis2_bad
+File-contents:
+or('maybe', this, 1, is, 2, a, '8, program, H).
+Prolog parser result:
+syntax error
+
+Syntactically incorrect (INVALID) string
+
+File-name: whoknows_bad
+File-contents:
+WHOKNOWS.
+
+Prolog parser result:
+syntax error
+
+Syntactically incorrect (INVALID) string
+
+File-name: multiple1
+File-contents:
+giandre(727).
+whatis(8,'this',5,4,Y).
+whatis(3).
+Prolog parser result:
+
+The input string is a SYNTACTICALLY CORRECT Prolog set of clauses.
+File-name: multiple2
+File-contents:
+giandre.
+whatmaybe('this', is, a, button, 55).
+m3m3m3m3m3m3.
+Prolog parser result:
+
+The input string is a SYNTACTICALLY CORRECT Prolog set of clauses.
+File-name: rule
+File-contents:
+tail('5') :- head('9'), head('8'), head('7').
+Prolog parser result:
+
+The input string is a SYNTACTICALLY CORRECT Prolog set of clauses.
+File-name: rule_bad
+File-contents:
+tail(3) ::- head(8),head(7),head(6).
+Prolog parser result:
+syntax error
+
+Syntactically incorrect (INVALID) string
+

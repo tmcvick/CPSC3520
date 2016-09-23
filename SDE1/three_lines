@@ -1,0 +1,3 @@
+tim(123).
+thisShouldNotWork('123')
+lol

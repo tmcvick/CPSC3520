@@ -1,0 +1,53 @@
+<clause list> ::= <clause> | <clause list> <clause>
+<clause> ::= <predicate> . | <predicate> :- <predicate list>.
+<predicate list> ::= <predicate> | <predicate list> , <predicate>
+<predicate> ::= <atom> | <atom> ( <term list> )
+<term list> ::= <term> | <term list> , <term>
+<term> ::= <numeral> | <atom> | <variable>
+<atom> ::= <small atom> | ’ <string> ’
+<small atom> ::= <lowercase letter> | <small atom> <character>
+<variable> ::= <uppercase letter> | <variable> <character>
+<lowercase letter> ::= a | b | c | ... | x | y | z
+<uppercase letter> ::= A | B | C | ... | X | Y | Z
+<numeral> ::= <digit> | <numeral> <digit>
+<digit> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+<character> ::= <lowercase letter> | <uppercase letter> | <digit>
+<string> ::= <character> | <string> <character>
+
+clauselist: clause
+            | clauselist clause
+
+clause: predicate DOT
+        | predicate COLON DASH predicatelist DOT
+
+predicatelist: predicate
+               | predicatelist COMMA predicate
+
+predicate: atom
+          | atom LPARENS termlist RPARENS
+
+termlist: term
+          | termlist COMMA term
+
+term: numeral
+      | atom
+      | variable
+
+atom: smallatom
+      | QUOTE string QUOTE
+
+smallatom: LOWERCASE
+           | smallatom character
+
+variable: UPPERCASE
+          | variable character
+
+numeral: DIGIT
+         | numeral DIGIT
+
+character: LOWERCASE
+          | UPPERCASE
+          | DIGIT
+
+string: character
+        | string character

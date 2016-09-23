@@ -1,0 +1,68 @@
+File-name: bad_list
+File-contents:
+score('7') ::- minus('8'), tim.
+Prolog parser result:
+syntax error
+
+Syntactically incorrect (INVALID) string
+File-name: list
+File-contents:
+score('7') :- minus('8'), tim.
+Prolog parser result:
+
+The input string is a SYNTACTICALLY CORRECT Prolog set of clauses.
+File-name: longstring
+File-contents:
+longstring(a,  b, c, d, e, 1).
+Prolog parser result:
+
+The input string is a SYNTACTICALLY CORRECT Prolog set of clauses.
+File-name: longstringwithquotes
+File-contents:
+longstringwithquotes('quotes').
+Prolog parser result:
+
+The input string is a SYNTACTICALLY CORRECT Prolog set of clauses.
+File-name: misplacedquote
+File-contents:
+thishasamisplacedquote('onlyone).
+Prolog parser result:
+syntax error
+
+Syntactically incorrect (INVALID) string
+File-name: three_lines
+File-contents:
+tim(123).
+thisShouldNotWork('123')
+lol
+Prolog parser result:
+
+The input string is a SYNTACTICALLY CORRECT Prolog set of clauses.
+File-name: three_more_lines
+File-contents:
+tim.
+thisShouldntworkeither('haha')
+thisis24325nonesense
+Prolog parser result:
+
+The input string is a SYNTACTICALLY CORRECT Prolog set of clauses.
+File-name: tim
+File-contents:
+tim.
+Prolog parser result:
+
+The input string is a SYNTACTICALLY CORRECT Prolog set of clauses.
+File-name: tim_bad
+File-contents:
+tim("weirdquotes").
+Prolog parser result:
+syntax error
+
+Syntactically incorrect (INVALID) string
+File-name: tim_capital
+File-contents:
+TIM.
+Prolog parser result:
+syntax error
+
+Syntactically incorrect (INVALID) string
